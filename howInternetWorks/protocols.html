@@ -1,36 +1,56 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
+    <meta charset="UTF-8">
     <title>HTTP and HTTPS protocols</title>
+
+    <!--    Bootstrap CDN    -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!--    Font Awesome-->
+    <script src="https://kit.fontawesome.com/0cb92166ae.js" crossorigin="anonymous"></script>
+
+    <!---------favicon----------->
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="../img/favicon_io/site.webmanifest">
 </head>
-<body>
-<!-- Top Navigation Bar -->
-<div class="container">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="index.html">How the Internet Works</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
+<body style="background-color: #b57edc;">
+
+<!--Top Navigation Bar-->
+<nav class="navbar navbar-expand-md navbar-light" style="background-color: #b57edc;">
+    <a class="navbar-brand" href="../index.html"><i class="fas fa-crow"></i></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <div class="center">
             <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
+                <li class="nav-item active">
+                    <a class="nav-link" href="../index.html">Home<span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html">About</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="historyDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        History of the Internet
+                    </a>
+                    <!--                    History Dropdown Menu-->
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="../historyOfInternet/invention.html">The Invention of the Internet</a>
+                        <a class="dropdown-item" href="../historyOfInternet/browserWars.html">Browser Wars</a>
+                        <a class="dropdown-item" href="../historyOfInternet/internetSearch.html">Internet Search</a>
+                        <a class="dropdown-item" href="../historyOfInternet/dotCom.html">Dot Com Bubble</a>
+                        <a class="dropdown-item" href="../historyOfInternet/people.html">Important People</a>
+                    </div>
                 </li>
-                <li class="nav-item dropdown active">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="worksDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         How the Internet Works
                     </a>
-                    <!--                    Dropdown Menu-->
+                    <!--                    Works Dropdown Menu-->
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="domain.html">Domain names and ICANN</a>
                         <a class="dropdown-item" href="ipAddress.html">IP Addresses, Packets and Routing</a>
@@ -41,60 +61,99 @@
                 </li>
             </ul>
         </div>
-    </nav>
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-            <li class="breadcrumb-item" aria-current="page">How the Internet Works</li>
-            <li class="breadcrumb-item active" aria-current="page">HTTP and HTTPS protocols</li>
-        </ol>
-    </nav>
+    </div>
+</nav>
 
+<div class="carousel-inner expand-sm">
+    <!--    Top Image-->
+    <img src="../img/HIW/http.jpg" style="width: 1400px;height: 700px;" alt="title">
+    <div class="carousel-caption" style="vertical-align:top;margin:250px -400px;">
+        <h1>
+            HTTP and HTTPS protocols
+        </h1>
+    </div>
+</div>
+
+<div class="row">
     <div class="row">
-        <div class="row">
-            <div class="col-8">
-                <h1>HTTP and HTTPS protocols</h1>
-                <img width="100%" height="auto" src="../images/http.jpg" alt="protocols">
-                <p>
-                    Hypertext Transfer Protocol (often abbreviated to HTTP) is a communications protocol. It is used to
-                    send and receive webpages and files on the internet. It was developed by Tim Berners-Lee and is now
-                    coordinated by the W3C. HTTP version 1.1 is the most common used version today. It is defined in RFC 2616.
-                </p>
-                <p>
-                    HTTP works by using a user agent to connect to a server. The user agent could be a web browser or spider.
-                    The server must be located using a URL or URI. This always contains http:// at the start. It normally
-                    connects to port 80 on a computer.
-                </p>
-                <p>
-                    A more secure version of HTTP is called HTTPS. This contains https:// at the beginning of the URL.
-                    It encrypts all the information that is sent and received. This can stop malicious users such as hackers
-                    from stealing the information. HTTPS is often used on payment websites. HTTPS uses port 443 for
-                    communication instead of port 80.
-                </p>
+        <div class="col-2 text-center"></div>
+        <div class="col-6 pt 3">
+            <div class="center" style="text-align: center">
+                <h1>
+                    HTTP and HTTPS protocols
+                </h1>
+                <hr style="width: 100px" class="my-3">
+                <!--                Text Section-->
             </div>
-
+            <p>
+                Hypertext Transfer Protocol (often abbreviated to HTTP) is a communications protocol. It is used to
+                send and receive webpages and files on the internet. It was developed by Tim Berners-Lee and is now
+                coordinated by the W3C. HTTP version 1.1 is the most common used version today. It is defined in RFC 2616.
+            </p>
+            <p>
+                HTTP works by using a user agent to connect to a server. The user agent could be a web browser or spider.
+                The server must be located using a URL or URI. This always contains http:// at the start. It normally
+                connects to port 80 on a computer.
+            </p>
+            <p>
+                A more secure version of HTTP is called HTTPS. This contains https:// at the beginning of the URL.
+                It encrypts all the information that is sent and received. This can stop malicious users such as hackers
+                from stealing the information. HTTPS is often used on payment websites. HTTPS uses port 443 for
+                communication instead of port 80.
+            </p>
+        </div>
+        <!--        Side Cards-->
+        <div class="col-4">
+            <div class="card" style="width: 18rem; background-color: #8634c0;">
+                <div class="card-header">
+                    <h2>History of the Internet</h2>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><a class="dropdown-item" href="../historyOfInternet/invention.html">The Invention of the Internet</a></li>
+                    <li class="list-group-item"><a class="dropdown-item" href="../historyOfInternet/browserWars.html">Browser Wars</a></li>
+                    <li class="list-group-item"><a class="dropdown-item" href="../historyOfInternet/internetSearch.html">Internet Search</a></li>
+                    <li class="list-group-item"><a class="dropdown-item" href="../historyOfInternet/dotCom.html">Dot Com Bubble</a></li>
+                    <li class="list-group-item"><a class="dropdown-item" href="../historyOfInternet/people.html">Important People</a></li>
+                </ul>
+            </div>
+            <br/>
+            <br/>
             <div class="col-4">
-                <div class="card" style="width: 18rem;">
+                <div class="card" style="width: 18rem; background-color: #8634c0;">
                     <div class="card-header">
-                        How the Internet Works
+                        <h2>How the Internet Works</h2>
                     </div>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item"><a class="dropdown-item" href="domain.html">Domain names and ICANN</a></li>
                         <li class="list-group-item"><a class="dropdown-item" href="ipAddress.html">IP Addresses, Packets and Routing</a></li>
                         <li class="list-group-item"><a class="dropdown-item" href="dns.html">DNS</a></li>
-                        <li class="list-group-item">HTTP and HTTPS protocols</li>
+                        <li class="list-group-item"><a class="dropdown-item" href="protocols.html">HTTP and HTTPS protocols</a></li>
                         <li class="list-group-item"><a class="dropdown-item" href="w3c.html">W3C and HTML and CSS</a></li>
                     </ul>
                 </div>
             </div>
         </div>
+
+
     </div>
 </div>
-
-<!--Dropdown Menu Script-->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-
+<br/>
+<br/>
+<footer id="footer">
+    <div class="container" style="text-align:center">
+        <ftr>
+            &copy;Copyright Nicholas Thibault 2020
+        </ftr>
+        <div class="center">
+            <div class="btn-group" role="group">
+                <a class="button11" href="https://github.com/abysmallyNeutral" role="button"><i class="fab fa-github"></i></a>
+            </div>
+            <div class="btn-group" role="group">
+                <a class="button11" href="https://www.linkedin.com/in/nicholas-thibault-5a7891172/" role="button"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <br/>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
